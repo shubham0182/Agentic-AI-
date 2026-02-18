@@ -1,21 +1,21 @@
 ## 🧭 Agentic AI Workflow Diagram
 
-The following diagram explains how the Agentic AI workflow operates inside **:contentReference[oaicite:0]{index=0}**, from input to autonomous task execution.
+The diagram below explains the Agentic AI workflow implemented using **:contentReference[oaicite:0]{index=0}**.
 
 ```mermaid
 flowchart TD
-    A[Trigger<br/>(Webhook / Schedule / User Input)]
-    B[AI Agent<br/>Reasoning & Planning]
-    C{Decision Node}
-    D[Execute Tool<br/>(API / Script / Service)]
+    A[Trigger: Webhook or Schedule or User Input]
+    B[AI Agent Reasoning and Planning]
+    C{Decision Logic}
+    D[Execute Tool or API]
     E[Evaluate Result]
-    F{Goal Achieved?}
+    F{Goal Achieved}
     G[End Workflow]
-    H[Refine Prompt / Retry]
+    H[Refine Prompt and Retry]
 
     A --> B
     B --> C
-    C -->|Yes| D
+    C -->|Proceed| D
     D --> E
     E --> F
     F -->|Yes| G
